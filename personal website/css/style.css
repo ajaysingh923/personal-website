@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,900;1,400;1,700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+::selection {
+    background-color: black;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(116, 116, 116);
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+
+}
+
+.navbar.sticky {
+    background: rgb(116, 116, 116);
+    padding: 3px 0;
+}
+
+.max-width {
+
+    padding: 0 80px;
+    margin: auto;
+}
+
+
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .max-width .logo a {
+    color: whitesmoke;
+    font-size: 45px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    max-height: 40px;
+    max-width: 55px;
+    margin-right: 10px;
+    padding-top: 7px;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+
+}
+
+.navbar .menu li a {
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 25px;
+    position: relative;
+}
+
+.navbar .menu li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    transition: width 0.5s;
+}
+
+.navbar .menu li a:hover::after {
+    width: 70%;
+}
+
+.menu-bar {
+    color: whitesmoke;
+    font-size: 23px;
+    cursor: pointer;
+    font-size: 25px;
+    display: none;
+}
+
+
+
+.navbar .logo a span {
+    color: red;
+    transition: all 0.3s ease;
+    font-size: 20px;
+
+}
+
+
+/* home page*/
+
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url(../images/backgroundpic.png) no-repeat center;
+    background-size: cover;
+
+}
+
+.home .main .text {
+    width: 95%;
+    padding-top: 45vh;
+    text-align: center;
+    font-size: 25px;
+    color: whitesmoke;
+}
+
+.home .main .text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.home .main .text h1 .text-animation {
+    font-size: 60px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px yellow;
+    font-family: 'popins', sans-serif;
+
+
+}
+
+.home .main .social-links {
+    position: absolute;
+    right: 3%;
+    top: 80%;
+}
+
+.home .main .social-links a {
+    display: block;
+}
+
+.home .main .social-links .linkedin,
+.github,
+.instagram {
+    width: 25px;
+    margin-bottom: 25px;
+    transition: all 0.5s ease-out;
+}
+
+.home .main .social-links .linkedin:hover,
+.github:hover,
+.instagram:hover {
+    transform: scale(1.5);
+}
+
+
+
+
+/* about me*/
+
+.about {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+}
+.about .content{
+    display: inline-flex;
+}
+
+.about .main .title {
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 25px;
+    height: 10%;
+}
+.about .image{
+    width: 35%;
+    margin-top: 100px;
+}
+
+.about .image img{
+    height: 200px;
+        width: 200px;
+        margin-left: 150px;
+        object-fit: cover;
+        border-radius: 155px;
+        border: 5px solid white;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.about .details{
+    width: 55%;
+}   
+.about .details span{
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 130px;
+    margin-bottom: 15px;
+    display: inline-block;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.about .details p{
+    font-size: 20px;
+    display: inline-block;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+/*skills*/
+.skills .main {
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.skills .main .title {
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    width: 100%;
+    height: 10%;
+    font-size: 25px;
+}
+
+.skills .main .content {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    margin: 50px auto;
+
+}
+
+.skills .main .content .container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+
+}
+
+.skills .main .content .container .textbox {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+
+}
+
+.skills .main .content .container .textbox h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.skills .main .content .container .textbox p {
+    display: inline-block;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.skills .main .content .leftcontainer {
+    left: 0%;
+}
+
+.skills .main .content .righttcontainer {
+    left: 50%;
+}
+
+.container img {
+    position: absolute;
+    width: 39px;
+    height: 37px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 55%;
+    background: white;
+    right: -20px;
+    top: 32px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.5s ease-out;
+}
+
+.container img:hover {
+    transform: scale(1.1);
+}
+
+.righttcontainer img {
+    left: -20px;
+}
+
+.skills .content::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 85%;
+    background-color: rgba(0, 0, 0, 0.1);
+    left: 50%;
+    top: 0;
+    margin-left: -3px;
+    z-index: -1;
+}
+
+.textbox:hover {
+    transform: scale(1.05);
+}
+
+.left-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgba(0, 0, 0, 0.1);
+    right: -15px;
+}
+
+.right-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgba(0, 0, 0, 0.1);
+    left: -14px;
+}
+
+
+
+
+
+/*education*/
+.education {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.education .main .title {
+    position: relative;
+    text-align: center;
+    height: 15%;
+    padding-top: 100px;
+    margin-bottom:50px ;
+    font-size: 25px;
+}
+.educationcontent{
+    padding-left:35%;
+    height: 85%;
+    width: 100%;
+    position: relative;
+    
+        
+}
+.educationcontent .text {
+    width: 550px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 50px;
+    padding: 25px;
+    color: black;
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.text:hover {
+    transform: scale(1.03);
+}
+
+.educationcontent .text b,
+.educationcontent .text span {
+    font-size: 17px;
+}
+
+.educationcontent .text p {
+    font-size: 15px;
+}
+.educationcontent::after {
+    content: '';
+    position: absolute;
+    padding-top: 50px;
+    width: 6px;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.1);
+    left: 10%;
+    top: 0;
+    left: 33%;
+    z-index: -1;
+}
+.top .education-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 30px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgba(0, 0, 0, 0.1);
+    left: 33.4%;
+}
+.mid .education-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 230px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgba(0, 0, 0, 0.1);
+    left: 33.4%;
+}
+.down .education-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 430px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgba(0, 0, 0, 0.1);
+    left: 33.4%;
+}
+
+
+/*contact*/
+.contact {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .title {
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 25px;
+}
+.contact .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+.contact .contactinfo{
+        font-size: 25px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 6px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+.contact .contactinfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+
+}
+.contact .contactinfo .box .icon{
+    min-width: 50px;
+    height: 50px;
+    background:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.contact .contactinfo .box .ctext{
+    display: flex;
+    margin-left: 20px;
+    font-size: 15px;
+    color: black;
+    flex-direction: column;
+}
+.contact .contactinfo .box .ctext h4{
+     color: #00bcd4;
+}
+
+.contact .contactform{
+    width: 30%;
+    padding: 20px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+.contactform {
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+
+.contactform h2 {
+    font-size: 25px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactform .inputbox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactform .inputbox input,
+.contactform .inputbox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactform .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox input:valid ~ span,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactform .inputbox input[type="submit"] {
+    background: #00bcd4;
+    color: #fff;
+    width: 100px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}    
+ /* Mobile Styles */
+ @media screen and (max-width: 600px) {
+
+     .navbar .max-width {
+         flex-direction: row;
+     }
+
+     .navbar .menu-bar {
+         display: block;
+         margin-top: 10px;
+         text-align: center;
+         font-size: 30px;
+         cursor: pointer;
+     }
+
+     .navbar .menu {
+         position: absolute;
+         top: 100%;
+         left: 0;
+         width: 100%;
+         background: rgb(116, 116, 116);
+         padding: 10px 0;
+         display: none;     }
+
+     .navbar.active .menu {
+         display: block;
+         text-align: center;
+     }
+
+     .navbar .menu li {
+         margin-bottom: 15px;
+     }
+
+     .home .text h1 #element{
+         font-size: 30px;
+         padding-top: 30px;
+     }
+    .home .text h1 .hitext{
+         font-size: 30px;
+    }
+         .home .main .text h1 .text-animation {
+             font-size: 35px;
+         }
+
+    
+        .about .content {
+            display: inline-flex;
+        }
+    
+        .about .main .title {
+            text-align: center;
+            padding-top: 100px;
+            font-size: 25px;
+            height: 10%;
+        }
+    
+        .about .image {
+            width: 35%;
+            margin-top: 50px;
+        }
+    
+        .about .image img {
+            height: 200px;
+            width: 200px;
+            margin-left: 150px;
+
+        }
+    
+        .about .details {
+            width: 55%;
+             padding-right: -300px;
+        }
+    
+        .about .details span {
+            font-size: 25px;
+            font-weight: 700;
+            margin-top: 130px;
+            margin-bottom: 15px;
+            display: inline-block;
+            letter-spacing: 1px;
+            line-height: 25px;
+        }
+    
+        .about .details p {
+            font-size: 20px;
+            display: inline-block;
+            letter-spacing: 1px;
+            line-height: 20px;
+        }
+
+     .skills .content .container {
+         width: 100%;
+         margin: 0;
+     }
+
+     .skills .main .content .container .textbox {
+         font-size: 15px;
+         padding: 10px;
+     }
+
+     .educationcontent .text {
+         width: 100%;
+         margin: 0;
+         padding: 20px;
+         box-shadow: none;
+     }
+
+     .contact .container {
+         flex-direction: column;
+     }
+
+     .contact .contactinfo,
+     .contact .contactform {
+         width: 100%;
+         margin: 0;
+     }
+
+     .contact .contactinfo .box {
+         margin-bottom: 20px;
+     }
+
+     .contactform {
+         margin-top: 20px;
+         padding: 20px;
+     }
+ }
